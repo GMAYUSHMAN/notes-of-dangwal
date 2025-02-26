@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dangwal's Coding Notes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Login/Signup Page -->
+  <div id="authPage" class="auth-page">
+    <div class="auth-container">
+      <h1>Welcome to Dangwal's Coding Notes</h1>
+      <div class="auth-form">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <button onclick="signup()">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main App Page -->
+  <div id="appPage" class="container" style="display: none;">
+    <header>
+      <h1>Dangwal's Coding Notes</h1>
+      <p>Organize your coding journey with ease!</p>
+    </header>
+
+    <main>
+      <div class="folder-container">
+        <div class="folder" onclick="createFolder()">
+          <i class="fas fa-folder-plus"></i>
+          <span>Create New Folder</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>Welcome to <strong>Dangwal's Coding Notes</strong>!</p>
+        <p>Easily add and organize unlimited notes with a simple and clean interface. Whether it's coding notes, daily thoughts, or important reminders, keep everything in one place. Enjoy a smooth, free, and user-friendly experience without any limits!</p>
+        <p>This app is proudly created by <strong>Ayushman Thapliyal</strong>, brother of <strong>Piyush Dangwal</strong>. As a scriptwriter, thumbnail maker, logo maker, and web developer, I strive to bring innovative and useful digital tools to enhance productivity.</p>
+        <p>Stay organized, stay productive! 🚀</p>
+      </div>
+      <div class="social-links">
+        <a href="mailto:ayushmanthapliyal1@gmail.com"><i class="fas fa-envelope"></i> ayushmanthapliyal1@gmail.com</a>
+        <a href="https://www.instagram.com/alive.efx" target="_blank"><i class="fab fa-instagram"></i> alive.efx</a>
+        <a href="mailto:piyushdangwal8@gmail.com"><i class="fas fa-envelope"></i> piyushdangwal8@gmail.com</a>
+        <a href="https://www.instagram.com/piyush_dangwal" target="_blank"><i class="fab fa-instagram"></i> piyush_dangwal</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Folder Content Modal -->
+  <div id="folderModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="folderName"></h2>
+      <input type="file" id="fileInput" accept=".pdf,.txt">
+      <button onclick="uploadFile()">Upload File</button>
+      <div id="fileList"></div>
+    </div>
+  </div>
+
+  <!-- Audio for Button Click -->
+  <audio id="buttonSound">
+    <source src="sounds/Sound.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
